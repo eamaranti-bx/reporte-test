@@ -25,7 +25,8 @@
         }
     </style>
 </head>
-<body><span id="iframe"></span>
-    <iframe id="innerFrame" src="https://reportes.bluex.cl/#/views/ProcesosHUB/Santiago" frameborder="0" width="100%" height="100%"></iframe>
-</body>
+<body>
+    <script type='module' src='https://reportes.bluex.cl/javascripts/api/tableau.embedding.3.latest.min.js'></script>
+    <tableau-viz id='tableau-viz' src='https://reportes.bluex.cl/views/ProcesosHUB/Santiago' width='1854' height='807' toolbar='bottom' ></tableau-viz>
+   
 </html>
