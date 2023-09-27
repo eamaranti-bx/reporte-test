@@ -12,9 +12,8 @@
     <script>
         setInterval(function () {
             var src = $('#tableau-viz').attr('src');
-             var iframe_html = ' <tableau-viz id="tableau-viz" src="'+ src +'" width="1854" height="807" toolbar="bottom" ></tableau-viz>';
+             var iframe_html = ' <tableau-viz id="tableau-viz" src="'+ src +'" width="1854" height="807" toolbar="hidden" hide-tabs></tableau-viz>';
              $('#iframe').html(iframe_html);
-             console.log(src)
          }, 60000);
      </script>
     <style>
