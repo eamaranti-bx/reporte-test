@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script type='module' src='https://reportes.bluex.cl/javascripts/api/tableau.embedding.3.latest.min.js'></script>
     <script>
-        window.setInterval("reloadIFrame();", 30000);
-        
-        function reloadIFrame() {
-         document.frames["frameReport"].location.reload();
-        }
-        </script>
+        setInterval(function () {
+            var src = $('#tableau-viz').attr('src');
+             var iframe_html = ' <tableau-viz id="tableau-viz" src="'+ src +'" width="1854" height="807" toolbar="bottom" ></tableau-viz>';
+             $('#iframe').html(iframe_html);
+             console.log(src)
+         }, 1000);
+     </script>
     <style>
         body, iframe{
             height: 100vh;
@@ -19,6 +25,9 @@
     </style>
 </head>
 <body>
-    <iframe id="frameReport" src="https://reportes.bluex.cl/#/views/ProcesosHUB/Santiago?:iid=1"></iframe>
+    <span id="iframe">
+        <tableau-viz id='tableau-viz' src='https://reportes.bluex.cl/views/ProcesosHUB/Santiago' width='1854' height='807' toolbar='hidden' hide-tabs></tableau-viz>
+</span>
+
 </body>
 </html>
