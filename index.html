@@ -9,6 +9,11 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
     crossorigin="anonymous"></script>
     <script type='module' src='https://reportes.bluex.cl/javascripts/api/tableau.embedding.3.latest.min.js'></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script type='module' src='https://reportes.bluex.cl/javascripts/api/tableau.embedding.3.latest.min.js'></script>
     <script>
         setInterval(function () {
             var src = $('#tableau-viz').attr('src');
@@ -25,6 +30,10 @@
     </style>
 </head>
 <body>
+    <span id="iframe">
+        <tableau-viz id='tableau-viz' src='https://reportes.bluex.cl/views/ProcesosHUB/Santiago' width='1854' height='807' toolbar='hidden' hide-tabs></tableau-viz>
+</span>
+
     <span id="iframe">
         <tableau-viz id='tableau-viz' src='https://reportes.bluex.cl/views/ProcesosHUB/Santiago' width='1854' height='807' toolbar='hidden' hide-tabs></tableau-viz>
 </span>
